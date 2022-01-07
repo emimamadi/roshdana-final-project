@@ -7,11 +7,47 @@ if (!empty($_POST)) {
 
 
     $fullname = $_POST["fullname"];
-    $age = $_POST["age"];
+
     $city = $_POST["city"];
+
     $address = $_POST["address"];
-    $sex = $_POST["sex"];
-    $education = $_POST["education"];
+
+    $age = $_POST["age"];
+
+    if ($_POST["sex"] == "male") {
+
+        $sex = "مرد";
+    } else {
+        $sex = "زن";
+    }
+
+    switch ($_POST["education"]) {
+        case "diplom":
+            $education = "دیپلم";
+            break;
+
+        case "kardani":
+            $education = "کاردانی";
+            break;
+
+        case "bachelor":
+            $education = "لیسانس";
+            break;
+
+        case "master":
+            $education = "ارشد";
+            break;
+
+        case "phd":
+            $education = "دکترا";
+            break;
+
+        default:
+            $education = "بیسواد";
+    }
+
+
+
 
 
 
@@ -67,7 +103,7 @@ VALUES ('$fullname', '$age', '$city','$address','$sex','$education')";
 
     <header>
 
-    <?php include "header.php"; ?>
+        <?php include "header.php"; ?>
 
     </header>
 
@@ -100,7 +136,7 @@ VALUES ('$fullname', '$age', '$city','$address','$sex','$education')";
                     <tbody id="Table">
                         <?php
 
-                        $sql = "SELECT * FROM user";
+                        $sql = "SELECT * FROM user ORDER BY id DESC";
                         $result = $conn->query($sql);
 
                         while ($row = $result->fetch_assoc()) {
@@ -116,6 +152,7 @@ VALUES ('$fullname', '$age', '$city','$address','$sex','$education')";
                                 <td><?php echo $row['education']; ?></td>
                             </tr>
                         <?php }
+                        $conn->close();
                         ?>
                     </tbody>
                 </table>

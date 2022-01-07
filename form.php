@@ -50,7 +50,7 @@
                             <label for="inputState" class="form-label">جنسیت</label>
                             <select id="inputState" class="form-select" name="sex">
                                 <option value="male" >مرد</option>
-                                <option value="female"  >زن</option>
+                                <option value="female" >زن</option>
                             </select>
                         </div>
 
