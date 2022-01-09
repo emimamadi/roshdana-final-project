@@ -59,15 +59,6 @@ VALUES ('$fullname', '$age', '$city','$address','$sex','$education')";
 
 
 
-// if ($conn->query($sql) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $sql . "<br>" . $conn->error;
-// }
-
-// $conn->close();
-
-
 ?>
 
 
@@ -119,20 +110,8 @@ VALUES ('$fullname', '$age', '$city','$address','$sex','$education')";
 
                 <h4 style="text-align: center;" class="text-primary">لیست فرم استخدامی </h4>
 
-                <!-- <form class="d-flex mb-5">
-                    <input class="form-control me-2" type="search" aria-label="Search" id="filter">
-                    <button class="btn btn-outline-success" type="submit">فیلتر</button>
-                </form> -->
+
                 <div class="panel panel-primary filterable">
-                    <div class="panel-heading">
-                        <!-- <h3 class="panel-title">
-                            <button class="btn btn-default btn-xs btn-filter bg-primary text-white w-100"><span class="glyphicon glyphicon-filter"></span>فیلتر</button>
-                        </h3> -->
-
-                    </div>
-
-
-
                     <table class="table table-success table-striped table-bordered">
                         <thead>
 
@@ -192,16 +171,6 @@ VALUES ('$fullname', '$age', '$city','$address','$sex','$education')";
                     </table>
 
                 </div>
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
